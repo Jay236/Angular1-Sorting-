@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>XfinityCode</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body ng-app="myApp">
+
+<div ng-controller="myCtrl">
+  <h1 class="text-center">Welcome to Seed Project</h1>
+  
+      <form>
+      <div class="input-group">
+        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+        <input type="text" class="form-control" placeholder="Search name" ng-model="name">
+      </div>     
+  </form>
+  
+  <table class="table table-responsive">
+    
+    <thead>
+      <tr>
+        <td>
+          <a href="#" ng-click="sortType = 'name'; sortReverse = !sortReverse">
+            Name 
+            <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </td>
+        <td>
+          <a href="#" ng-click="sortType = 'category'; sortReverse = !sortReverse">
+          Category 
+            <span ng-show="sortType == 'category' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'category' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </td>
+        <td>
+          <a href="#" ng-click="sortType = 'amount'; sortReverse = !sortReverse">
+          Amount 
+            <span ng-show="sortType == 'amount' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'amount' && sortReverse" class="fa fa-caret-up"></span>
+            </a>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr ng-repeat="cust in myData | orderBy:sortType:sortReverse | filter:name">
+    <td>{{cust.name}}</td>
+    <td>{{cust.category}}</td> 
+    <td>{{cust.amount}}</td>
+  </tr>
+  
+</tbody>
+  
+    </table>
+    </div>
+		<script src="js/index.js"></script>
+
+</body>
+</html>

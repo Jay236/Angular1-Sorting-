@@ -1,0 +1,54 @@
+[{
+    
+"name": "Brad",
+"category": "C1",
+"amount": 10
+},
+{
+"name": "Jason",
+"category": "C1",
+"amount": 30
+},
+{
+"name": "Hang over",
+"category": "C1",
+"amount": 20
+},
+{
+"name": "Zombie",
+"category": "C2",
+"amount": 100
+},
+{
+"name": "Wrong Turn",
+"category": "C2",
+"amount": 600
+
+},
+{
+"name": "Suzi",
+"category": "C2",
+"amount": 200
+},
+{
+"name": "Buffet",
+"category": "C2",
+"amount": 500
+},
+{
+"name": "Isco Bar",
+"category": "C3",
+"amount": 1000
+},
+{
+"name": "Nancy",
+"category": "C3",
+"amount": 3000
+},
+{
+"name": "Kristen",
+"category": "C3",
+"amount": 5000
+}
+
+]
